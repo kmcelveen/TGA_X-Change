@@ -27,12 +27,12 @@ module.exports = {
         query: {
           presets: ['es2015', 'react']
         },
-        exclude: '/node_modules'
+        exclude: '/node_modules',
       },
       //This converts our .css into JS
       {
         test: /\.css$/,
-        loader: 'css-loader'
+        loader: 'style-loader!css-loader'
       }
     ]
   },

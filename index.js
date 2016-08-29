@@ -1,12 +1,16 @@
-import React, { Component } from 'react'
-import { render } from 'react-dom'
+import React, { Component } from 'react';
+import { render } from 'react-dom';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import App from './public/components/App';
+import getReducers from './public/reducers/reducers';
+let styles = require('./public/styles.css');
 
-class HelloWorld extends Component {
-  render() {
-    return (
-      <div>Hello World!</div>
-    )
-  }
-}
+const store = createStore(getReducers);
 
-render(<HelloWorld/>, document.getElementById('app'));
+render(
+  <Provider store = {store}>
+    <App/>
+  </Provider>,
+  document.getElementById('app'));
+
