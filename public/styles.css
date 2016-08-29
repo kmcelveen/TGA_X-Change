@@ -1,3 +1,6 @@
+@import 'https://fonts.googleapis.com/css?family=Sigmar+One';
+
+
 /*! normalize.css v4.2.0 | MIT License | github.com/necolas/normalize.css */
 
 /**
@@ -5,7 +8,6 @@
  * 2. Correct the line height in all browsers.
  * 3. Prevent adjustments of font size after orientation changes in IE and iOS.
  */
-
 /* Document
    ========================================================================== */
 
@@ -457,4 +459,38 @@ template {
 
 [hidden] {
   display: none;
+}
+
+/*
+  Custom CSS
+*/
+
+
+#banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 490px;
+}
+
+.navbar-inner {
+    background:transparent
+}
+
+#logo {
+  font-family: 'Sigmar One', cursive;
+  color: #4779A3;
+}
+
+#booksection{
+  position: absolute;
+    left: 0;
+    top: 76%;
+    width: 100%;
+    height: 490px;
+    text-align: center;
+    font-size: 18px;
+    background-color: rgb(65,174,255);
 }

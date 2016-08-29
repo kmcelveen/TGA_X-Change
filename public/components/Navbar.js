@@ -13,10 +13,10 @@ class NavBar extends React.Component {
           <div className="header">
             <header>
               <div className="navigation">
-                  <Navbar inverse fixedTop>
+                  <Navbar fixedTop className="navbar-inner">
                     <Navbar.Header>
                       <Navbar.Brand>
-                        <a href="#">{this.displayName}</a>
+                        <a id="logo" href="#">{this.displayName}</a>
                       </Navbar.Brand>
                       <Navbar.Toggle />
                     </Navbar.Header>
@@ -29,12 +29,12 @@ class NavBar extends React.Component {
                   </Navbar>
                 </div>
                 <div>
+                  <img id="banner" className="img-responsive"src="../images/headerphoto.jpg"/>
                 </div>
               </header>
           </div>
         );
     }
 }
-// <img src="../images/headerphoto.jpg" />
 
 export default NavBar;
