@@ -1,16 +1,15 @@
 import React from 'react';
 import { Navbar, Nav, NavItem, MenuItem, NavDropdown } from 'react-bootstrap';
 
- 
-  
 class NavBar extends React.Component {
-    constructor(props) {
-        super(props);
-        this.displayName = 'TGA Xchange';
-    }
-    render() {
-        return (
-          <div className="header">
+  constructor(props) {
+    super(props);
+    this.displayName = 'TGA Xchange';
+  }
+
+  render() {
+    return (
+      <div className="header">
             <header>
               <div className="navigation">
                   <Navbar fixedTop className="navbar-inner">
@@ -33,8 +32,8 @@ class NavBar extends React.Component {
                 </div>
               </header>
           </div>
-        );
-    }
+    );
+  }
 }
 
 export default NavBar;

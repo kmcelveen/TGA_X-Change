@@ -8,7 +8,7 @@ var port = 3000;
 // We need to add a configuration to our proxy server,
 // as we are now proxying outside localhost
 var proxy = httpProxy.createProxyServer({
-  changeOrigin: true
+  changeOrigin: true,
 });
 
 var app = express();
@@ -26,14 +26,14 @@ bundle();
 //app.all is a special routing method used for loading middleware functions
 app.all('/build/*', function (req, res) {
   proxy.web(req, res, {
-      target: 'http://localhost:8080'
-  });
+      target: 'http://localhost:8080',
+    });
 });
 
-proxy.on('error', function(e) {
-  console.log('Could not connect to proxy, please try again...')
+proxy.on('error', function (e) {
+  console.log('Could not connect to proxy, please try again...');
 });
 
 app.listen(port, function () {
-  console.log('Server running on port ' + port)
+  console.log('Server running on port ' + port);
 });
